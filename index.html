@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+   <link rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="./modal.css">
+   <title>Rock Paper Scissors Games</title>
+</head>
+<body>
+   <div class="container">
+      <header class="header">
+         <h1>Rock Paper Scissors Game</h1>
+         <button id="restart" class="restart-btn">Restart</button>
+         <div id="score" class="score-game">
+            <p>Player: 0</p>
+            <p>Computer: 0</p>
+         </div>
+      </header>
+      <h2>Make your selection</h2>
+      <div class="choices">
+         <i id="rock" class="choice tx far fa-hand-rock fa-5x"></i>
+         <i id="paper" class="choice far fa-hand-paper fa-5x"></i>
+         <i id="scissors" class="choice far fa-hand-scissors fa-5x"></i>
+      </div>
+   </div>
+   <!-- Popup Modal -->
+   <div class="modal">
+      <div id="result" class="modal-content"></div>
+   </div>
+   
+   <script src="./script.js"></script>
+</body>
+</html>

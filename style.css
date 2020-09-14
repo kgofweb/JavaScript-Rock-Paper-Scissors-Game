@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+
+/* VARIABLE CSS */
+:root {
+   --primary-color: #6c5ce7;
+   --dark-color: #444444;
+   --light-color: #f4f4f4;
+   --lose-color: #dc3545;
+   --win-color: #28a745;
+   --modal-duration: 1s;
+}
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+   line-height: 1.6;
+   background: #FFF;
+   color: #333;
+}
+
+.container {
+   width: 70%;
+   margin: auto;
+   padding: 0 2rem;
+   overflow: hidden;
+   text-align: center;
+}
+
+.restart-btn {
+   position: relative;
+   display: none;
+   background: var(--light-color);
+   color: #333;
+   padding: 0.4rem 1.3rem;
+   font-size: 1rem;
+   outline: none;
+   border: none;
+   margin-bottom: 1rem;
+   cursor: pointer;
+   border-radius: 3px;
+   overflow: hidden;
+   transition: 0.3s;
+}
+
+/* Animation with Ripple Effect */
+.restart-btn > .ripple {
+   position: absolute;
+   transform: translate(-50%, -50%);
+   width: 100px;
+   height: 100px;
+   border-radius: 50px;
+   background: #FFF;
+   opacity: .5;
+   animation: ripple var(--modal-duration);
+}
+
+@keyframes ripple {
+   to {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(2.5);
+   }
+}
+
+.restart-btn:hover {
+   background: #6c5ce7;
+   color: #FFF;
+   box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+   text-align: center;
+   margin: 1rem 0;
+}
+
+.header h1 {
+   margin-bottom: 1rem;
+}
+
+.score-game {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.score-game > p {
+   flex: 1;
+   color: #FFF;
+   padding: 5px 0;
+   font-weight: 600;
+}
+
+.score-game p:first-child {
+   background: var(--primary-color);
+   border-radius: 4px 0px 0px 4px;
+}
+
+.score-game p:last-child {
+   background: var(--dark-color);
+   border-radius: 0px 4px 4px 0px;
+}
+
+.choices {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 2rem;
+   margin-top: 3rem;
+   text-align: center;
+}
+
+.choice {
+   cursor: pointer;
+}
+
+.choice:hover {
+   color: var(--primary-color);
+}
+
+.text-win  {
+   color: var(--win-color);
+}
+
+.text-lose {
+   color: var(--lose-color);
+}
+
+text.draw {
+   color: var(--dark-color);
+}
+
+@media (max-width: 700px) {
+   .header h1 {
+      font-size: 1.5rem;
+   }
+
+   .choice {
+      font-size: 60px;
+   }
+}
+
+@media (max-width: 500px) {
+   .choice {
+      font-size: 40px;
+   }
+}
